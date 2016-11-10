@@ -6,7 +6,6 @@
 #
 # If you use these step definitions as basis for your features you will quickly end up
 # with features that are:
-#
 # * Hard to maintain
 # * Verbose to read
 #
@@ -76,6 +75,7 @@ end
 # TODO: Add support for checkbox, select or option
 # based on naming conventions.
 #
+
 When /^(?:|I )fill in the following:$/ do |fields|
   fields.rows_hash.each do |name, value|
     When %{I fill in "#{name}" with "#{value}"}
@@ -252,3 +252,4 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+
